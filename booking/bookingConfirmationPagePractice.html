@@ -7,8 +7,8 @@
     <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
 
     <link rel="stylesheet" href="../style.css" />
-    <script language="javascript" src="admin/inc-script/common.js"></script>
-    <script src="logging.js"></script>
+    <script language="javascript" src="../admin/inc-script/common.js"></script>
+    <script src="../logging.js"></script>
 </head>
 
 <body onload="loadDetails()" bgcolor="#FFFFFF" marginwidth="0" marginheight="0" topmargin="0" leftmargin="0"
@@ -258,11 +258,10 @@
                                 <td class="txtbold" nowrap="">
 
                                     <input type="button" name="" value="<< Back" class="btn"
+                                        onmouseover="blueBtnOver(this)" onmouseout="blueBtnOut(this)"
                                         onclick="javascript:history.go(-1)">
-                                    <!-- onmouseover="blueBtnOver(this)"
-                                        onmouseout="blueBtnOut(this)"> NOT DEFINED -->
-                                    <input type="submit" name="" value="Confirm" class="btn" onclick="successPage()">
-                                    <!-- onmouseover="blueBtnOver(this)" onmouseout="blueBtnOut(this)"> NOT DEFINED -->
+                                    <input type="submit" name="" value="Confirm" class="btn" onclick="successPage()"
+                                        onmouseover="blueBtnOver(this)" onmouseout="blueBtnOut(this)">
                                 </td>
                                 <td class="txtbold" style="text-align:right" nowrap="">
                                     &nbsp;
