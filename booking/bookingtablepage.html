@@ -8,9 +8,12 @@
     <script src="../logging.js"></script>
 </head>
 
-<body onload="changeLayout()">
-
+<body>
     <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            changeLayout();
+        });
+
         function changeOptions() {
             var currentLesson = localStorage.getItem('LessonNo') //unused
             document.getElementById('Lesson Display').innerHTML = ""; //initialise HTML
@@ -308,6 +311,7 @@
             }
 
         }
+
         //change input types/session time -for Praactice Page:
         function changeInputType() {
             var page = localStorage.getItem('TheorySelection')
@@ -319,6 +323,7 @@
                 }
             }
         }
+
         function changeVenues() {
             var venue = localStorage.getItem('Venue')
             var venues = document.getElementsByClassName('txtbold')
@@ -330,6 +335,7 @@
                 }
             }
         }
+
         function changeTable() {
             changeInputType()
             changeVenues()
@@ -430,9 +436,6 @@
                 return self.location.assign('bookingTableErrorPage.html')
             }
         }
-
-
-
 
         function changeLayout() {
             checkSlots()
